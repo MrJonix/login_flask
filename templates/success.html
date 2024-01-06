@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Success</title>
+    <style>
+      body {
+        background-color: #333;
+        color: white;
+        font-family: monospace;
+      }
+      h1 {
+        font-family: monospace;
+      }
+      a {
+        width: 50px;
+        background-color: #777;
+        text-decoration: none;
+        cursor: pointer;
+        color:white;
+        padding: 5px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Login Successful</h1>
+    <p>Welcome, {{ username }}!</p>
+    <a href="" onclick='logout()'>Logout</a>
+    {{ctf_flag}}
+    <script>
+        function logout() {
+            document.cookie = "session_cookie="
+            window.location.reload();
+        }
+    </script>
+  </body>
+</html>
